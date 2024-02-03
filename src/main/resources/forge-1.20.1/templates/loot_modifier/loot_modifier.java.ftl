@@ -34,7 +34,7 @@ public class ${JavaModName}LootModifier {
 
         @Override
         protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-            context.getResolver().getLootTable(lootTable).getRandomItems(context, generatedLoot::add);
+            context.getResolver().getLootTable(lootTable).getRandomItemsRaw(context, generatedLoot::add);
             return generatedLoot;
         }
 
