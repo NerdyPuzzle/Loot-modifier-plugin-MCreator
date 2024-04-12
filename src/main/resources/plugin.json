@@ -1,13 +1,12 @@
 {
   "id": "loot_modifier",
+  "minversion": 202300400000,
+  "maxversion": 202300499999,
   "weight": 3001,
   "javaplugin": "net.nerdypuzzle.lootmodifier.Launcher",
-  "supportedversions": [
-    202400115713
-  ],
   "info": {
     "name": "Loot modifier",
-    "version": "1.2",
+    "version": "1.1",
     "description": "Adds a new element to allow for the modification of existing loot tables",
     "author": "NerdyPuzzle"
   }
