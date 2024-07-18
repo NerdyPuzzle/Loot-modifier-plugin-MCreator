@@ -3,12 +3,11 @@
   "weight": 3001,
   "javaplugin": "net.nerdypuzzle.lootmodifier.Launcher",
   "supportedversions": [
-    202400115713,
-    202400115821
+    2024002
   ],
   "info": {
     "name": "Loot modifier",
-    "version": "1.2.1",
+    "version": "1.3",
     "description": "Adds a new element to allow for the modification of existing loot tables",
     "author": "NerdyPuzzle"
   }
