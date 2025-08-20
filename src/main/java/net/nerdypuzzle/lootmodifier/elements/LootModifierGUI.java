@@ -2,6 +2,7 @@ package net.nerdypuzzle.lootmodifier.elements;
 
 import net.mcreator.element.ModElementType;
 import net.mcreator.ui.MCreator;
+import net.mcreator.ui.MCreatorApplication;
 import net.mcreator.ui.component.SearchableComboBox;
 import net.mcreator.ui.component.util.ComboBoxUtil;
 import net.mcreator.ui.component.util.PanelUtils;
@@ -14,8 +15,11 @@ import net.mcreator.ui.validation.component.VTextField;
 import net.mcreator.ui.validation.validators.TextFieldValidator;
 import net.mcreator.workspace.elements.ModElement;
 
+import javax.annotation.Nullable;
 import javax.swing.*;
 import java.awt.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.stream.Collectors;
 
 public class LootModifierGUI extends ModElementGUI<LootModifier> {
@@ -73,6 +77,10 @@ public class LootModifierGUI extends ModElementGUI<LootModifier> {
         modifier.modifiedTable = modifiedTable.getText();
         modifier.modifierTable = modifierTable.getSelectedItem();
         return modifier;
+    }
+
+    @Override public @Nullable URI contextURL() throws URISyntaxException {
+        return new URI(MCreatorApplication.SERVER_DOMAIN + "/wiki/how-make-loot-table");
     }
 
 }
