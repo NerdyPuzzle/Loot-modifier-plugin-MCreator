@@ -51,7 +51,7 @@ public class LootModifierGUI extends ModElementGUI<LootModifier> {
         page1group.addValidationElement(modifiedTable);
 
         pane1.add(PanelUtils.totalCenterInPanel(mainPanel));
-        addPage(pane1);
+        addPage(pane1).lazyValidate(this::validatePage);
     }
 
     public void reloadDataLists() {
@@ -61,7 +61,7 @@ public class LootModifierGUI extends ModElementGUI<LootModifier> {
         }).map(ModElement::getName).collect(Collectors.toList()));
     }
 
-    protected AggregatedValidationResult validatePage(int page) {
+    protected AggregatedValidationResult validatePage() {
         if (modifierTable.getSelectedItem() == null)
             return new AggregatedValidationResult.FAIL(L10N.t("elementgui.lootmodifier.needs_modifier", new Object[0]));
         return new AggregatedValidationResult(new ValidationGroup[]{this.page1group});
