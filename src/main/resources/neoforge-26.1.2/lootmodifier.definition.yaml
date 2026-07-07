@@ -1,0 +1,4 @@
+templates:
+  - template: loot_modifier/loot_modifier.json.ftl
+    writer: json
+    name: "@MODDATAROOT/loot_modifiers/@registryname.json"
